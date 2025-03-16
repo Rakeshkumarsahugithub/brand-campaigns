@@ -1,0 +1,383 @@
+/* styles/global.css */
+:root {
+  /* Colors */
+  --primary-color: #4f46e5;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --bg-color: #f9fafb;
+  
+  /* Payout Types */
+  --color-fixed: #10b981;
+  --color-barter: #f59e0b;
+  --color-refund: #3b82f6;
+  --color-default: #64748b;
+
+
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.app-header {
+  background: rgb(207, 200, 200);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(152, 41, 13);
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: var(--transition-default);
+}
+
+.search-bar input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Campaigns Grid */
+.campaigns-grid {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .campaigns-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .campaigns-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+/* Campaign Card */
+.campaign-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(3, 0, 3, 5);
+  overflow: hidden;
+  transition: var(--transition-default);
+  display: flex;
+  flex-direction: column;
+  animation: cardEntrance 0.6s ease-out both;
+}
+
+.card-media {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.campaign-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: transform 0.4s ease;
+}
+
+.campaign-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  display: flex;
+  justify-content: flex-end;
+}
+
+.payout-type {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.payout-value {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin: 0.25rem 0 0;
+}
+
+.brand-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+.campaign-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.stat-icon {
+  font-size: 1.25rem;
+  color: #64748b;
+}
+
+.stat-value {
+  font-weight: 600;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  display: block;
+}
+
+/* ProgressBar.css */
+.progress-container {
+  width: 90%;
+  margin: 1.5rem;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.progress-status {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.progress-count {
+  color: var(--text-secondary);
+}
+
+.progress-track {
+  height: 12px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    #6366f1 100%
+  );
+  border-radius: 6px;
+  position: relative;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-bar-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add these to your :root variables */
+:root {
+  --primary-color: #4f46e5;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+}
+
+
+
+
+/* CTA Button */
+.cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: calc(100% - 3rem);
+  margin: 1rem 1.5rem;
+  padding: 0.75rem;
+  background: rgb(2, 114, 183);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+/* Animations */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressExpand {
+  from { width: 0 }
+  to { width: var(--progress-width) }
+}
+
+/* Hover Effects */
+.campaign-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-card:hover .campaign-image {
+  transform: scale(1.05);
+}
+
+.cta-button:hover {
+  background: #0542ea;
+  transform: translateY(-2px);
+}
+
+/* Loading */
+.loading-spinner {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 90vh; 
+  text-align: center;
+}
+.spinner-icon {
+  font-size: 7rem;
+  color: #df0c4b; 
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
