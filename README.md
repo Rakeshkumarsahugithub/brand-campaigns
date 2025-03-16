@@ -27,11 +27,6 @@ Check out the live demo: <a href="https://brand-campaigns.vercel.app">
 - CSS Modules
 - Modern JavaScript (ES6+)
 
-**Build Tools**
-- Create React App
-- Webpack
-- Babel
-
 **Version Control**
 - Git
 - GitHub
