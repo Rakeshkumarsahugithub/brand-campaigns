@@ -5,7 +5,7 @@ const Header = ({ searchQuery, onSearch }) => {
   return (
     <header className="app-header">
       <div className="header-content">
-        <h1 className="logo">Wobb</h1>
+        <h1 className="logo">Wobb Campaigns</h1>
         <div className="search-bar">
           <FiSearch className="search-icon" />
           <input
