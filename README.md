@@ -2,7 +2,7 @@
 
 
 
-Wobb Web App is a modern, responsive platform designed to bridge the gap between brands and influencers. This web application serves as a centralized hub where influencers can discover, apply, and track marketing campaigns with ease.
+Wobb is an influencer marketing platform that connects influencers with brands for collaboration opportunities. Influencers can browse and apply to campaigns that suit their niche, collaborate with brands, and get rewarded through various payout types like barter, refunds, and fixed pay.
 
 ## 🌟 Key Features
 
@@ -42,5 +42,5 @@ Check out the live demo: [Wobb Web App Demo](#) *(replace with actual link)*
 | **CampaignCard** | Displays campaign details with interactive elements |
 | **ProgressBar** | Animated progress indicator with gradient styling |
 | **Header** | Responsive navigation with search functionality |
-| **Filters** | Campaign filtering options (coming soon) |
+| **Filters** | Campaign filtering options |
 
