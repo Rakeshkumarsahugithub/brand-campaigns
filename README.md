@@ -16,7 +16,8 @@ Wobb is an influencer marketing platform that connects influencers with brands f
 
 ## 🖥️ Live Demo
 
-Check out the live demo: [Wobb Web App Demo](#) *(replace with actual link)*
+Check out the live demo: [https://brand-campaigns.vercel.app/](#) 
+
 
 ## 🛠️ Tech Stack
 
