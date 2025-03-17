@@ -27,7 +27,7 @@ const useCampaigns = () => {
             brand: {
               name: "Addidas",
               logo: "https://reverebd.com/wp-content/uploads/2019/08/Adidas-Black1.jpg",
-              description: "Sales Addidas's old stock t-shirts completely free"
+              description: "Adidas t-shirt barter deal."
             },
             payout: { type: "barter", value: "₹0" },
             progress: { hired: 8, total: 10 },
