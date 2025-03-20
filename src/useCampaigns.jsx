@@ -37,9 +37,9 @@ const useCampaigns = () => {
             id: 3,
             brand: {
               name: "Puma",
-              logo: "https://sharkshirts.in/wp-content/uploads/2023/07/Puma-Oversized-T-Shirt-scaled.jpg",
+              logo: "https://i5.walmartimages.com/asr/b43a2299-f335-419…cf6e88ae4_1.33fec6a186e76c1d2dc4e54dfde895e4.jpeg",
               description: "Shop the latest Puma t-shirts and enjoy up to 30% refunds on any damages."
-            },
+            }, //"https://sharkshirts.in/wp-content/uploads/2023/07/Puma-Oversized-T-Shirt-scaled.jpg"
             payout: { type: "refunds", value: "₹3000 - ₹5000 " },
             progress: { hired: 7, total: 10 },
             duration: "10 June 2025"
